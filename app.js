@@ -1,7 +1,7 @@
 const fs = require("fs/promises");
 
 (async () => {
-  //watcher - async iterator, async generator
+  //watcher - async iterator
   const watcher = fs.watch("./command.txt");
 
   for await (const event of watcher) {
