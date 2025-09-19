@@ -16,13 +16,14 @@ const fs = require("fs/promises");
     //The position that we want to start reading the file from
     const position = 0;
 
-    const content = await commandFileHandler.read(
+    await commandFileHandler.read(
       buff,
       offset,
       length,
       position
     );
-    console.log(content);
+
+    console.log(buff.toString("utf-8"));
   });
 
   //watcher - async iterator
