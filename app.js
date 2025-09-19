@@ -46,6 +46,7 @@ const fs = require("fs/promises");
 
     const command = buff.toString("utf-8");
 
+    //create a file
     if(command.includes(CREATE_FILE)){
       const filePath = command.substring(CREATE_FILE.length + 1)
       createFile(filePath)
